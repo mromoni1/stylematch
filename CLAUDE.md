@@ -7,7 +7,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 AI pipeline: Pinterest boards → aesthetic extraction → Vinted secondhand listings.
 
 ## Learning
-The primary purpose of this project is to learn modern practices with AI-assisted programming with Claude and building agentic workflows. Whenever possible, provide insight into design decisions where I can learn. Additionally, provide Claude Code shortcuts, commands, and instructions when they are helpful or applicable.
+This project's primary purpose is learning AI-assisted programming and agentic workflows. 
+Proactively explain design decisions and surface relevant Claude Code commands, 
+shortcuts, and patterns as they apply.
+
+## Agents
+When a task involves repeated, parallelizable, or context-heavy work, flag whether 
+it warrants a Claude Code subagent. Recommend name, description, model, and tool 
+scope if so.
 
 ## Stack
 - Frontend: Next.js (App Router) + Tailwind

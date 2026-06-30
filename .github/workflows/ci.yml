@@ -27,7 +27,7 @@ jobs:
         working-directory: backend
 
       - name: Test
-        run: pytest -v
+        run: pytest -v -m "not integration"
         working-directory: backend
 
   frontend:

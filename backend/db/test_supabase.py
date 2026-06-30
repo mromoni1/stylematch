@@ -2,6 +2,8 @@ import pytest
 
 from lib.supabase import get_client
 
+pytestmark = pytest.mark.integration
+
 
 @pytest.fixture
 def db():

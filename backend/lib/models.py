@@ -26,7 +26,7 @@ class StyleProfile(BaseModel):
     board_ids: list[str]
     anchor_pin_urls: list[str] = []
     style_context_path: Optional[str] = None
-    features: list[StyleFeature] = []
+    features: Annotated[list[StyleFeature], Field(max_length=5)] = []
 
 
 class UserPreferences(BaseModel):

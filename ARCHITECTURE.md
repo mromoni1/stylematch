@@ -122,6 +122,14 @@ UserPreferences
   brand_allowlist: string[]
   brand_blocklist: string[]
 
+SearchStrategy
+  sizes: string[]               # inherited from UserPreferences
+  price_min: float
+  price_max: float
+  brand_allowlist: string[]
+  brand_blocklist: string[]
+  keywords: string[]            # flat keyword list for a single Vinted search call
+
 Listing
   id: string                    # Vinted listing ID
   title: string
@@ -132,7 +140,11 @@ Listing
   vinted_url: string
   score: float                  # set by Results Evaluator
   reasoning: string             # one sentence from evaluator
-  feedback: "liked" | "disliked" | null
+  feedback: 1 | 2 | 3 | 4 | 5 | null   # 1 = way off, 5 = perfect match
+
+ScoredListing (extends Listing)
+  score: float                  # required (not optional)
+  reasoning: string             # required (not optional)
 ```
 
 ---

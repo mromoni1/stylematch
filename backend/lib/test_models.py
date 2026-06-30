@@ -44,6 +44,12 @@ def test_style_profile_valid():
     assert p.created_at is None
 
 
+def test_style_profile_rejects_more_than_5_features():
+    feature = StyleFeature(label="x", confidence=0.5, examples=[])
+    with pytest.raises(ValidationError):
+        StyleProfile(board_ids=["b"], features=[feature] * 6)
+
+
 def test_user_preferences_defaults():
     prefs = UserPreferences()
     assert prefs.sizes == []
